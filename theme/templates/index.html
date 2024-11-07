@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Personal Portfolio{% endblock %}
+
+{% block content %}
+    <h1>Projects</h1>
+    <ul>
+    {% for article in articles %}
+        <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

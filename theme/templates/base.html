@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ SITENAME }}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+  </head>
+  <body>
+    <header id="banner" class="body">
+      <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+      <nav>
+        <ul>
+          <li><a href="{{ SITEURL }}/">Home</a></li>
+          <li><a href="{{ SITEURL }}/category/projects.html">Projects</a></li>
+          <li><a href="{{ SITEURL }}/category/review.html">Review</a></li>
+        </ul>
+      </nav>
+    </header><!-- /#banner -->
+    <section id="content" class="body">
+      {% block content %}{% endblock %}
+    </section><!-- /#content -->
+    <section id="extras" class="body">
+      <div class="blogroll">
+        <h2>links</h2>
+        <ul>
+          {% for name, link in LINKS %}
+          <li><a href="{{ link }}">{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div><!-- /.blogroll -->
+      <div class="social">
+        <h2>social</h2>
+        <ul>
+          {% for name, link in SOCIAL %}
+          <li><a href="{{ link }}">{{ name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div><!-- /.social -->
+    </section><!-- /#extras -->
+  </body>
+</html>
