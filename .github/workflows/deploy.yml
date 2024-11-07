@@ -18,7 +18,7 @@ jobs:
           python-version: '3.9'
         run: pip install "pelican[markdown]"
       - name: Build site
-          run: pelican -o output -s publishconf.py -t theme/notmyidea
+          run: pelican -o output -s publishconf.py -t theme 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
